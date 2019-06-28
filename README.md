@@ -2,13 +2,13 @@
 
 ## RIPGEO-python3 based script to extract agilent expression matrix data from GEO(GSE) database and perform Differential Expression Analysis. 
 
-  Prerequisites
-  Please make sure you have already installed following python modules 
-    Pandas
-    Numpy
-    Scipy
-    Matplotlib
-    Seaborn
+    Prerequisites
+    Please make sure you have already installed following python modules 
+      Pandas
+      Numpy
+      Scipy
+      Matplotlib
+      Seaborn
     
     
 ### Usage 
