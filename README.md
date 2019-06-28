@@ -10,6 +10,8 @@
       Scipy
       Matplotlib
       Seaborn
+      statsmodels
+
     
     
 ### Usage 
