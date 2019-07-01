@@ -41,14 +41,14 @@ samples = gse.pivot_samples("VALUE").ix[expressed_probes]
 
 ######## Annotate matrix table
 
-samples_annotated = samples.reset_index().merge(gse.gpls[plt_name].table[["ID", "GB_ACC"]], left_on='ID_REF', right_on="ID").set_index('ID_REF')
+samples_annotated = samples.reset_index().merge(gse.gpls[plt_name].table[["ID", "GENE_NAME"]], left_on='ID_REF', right_on="ID").set_index('ID_REF')
 
 # print(samples_annotated.head())
 del samples_annotated["ID"]
 # print(samples_annotated.head())
-samples_annotated = samples_annotated.dropna(subset=["GB_ACC"])
-samples_annotated = samples_annotated[~samples_annotated.GB_ACC.str.contains("///")]
-samples_annotated = samples_annotated.groupby("GB_ACC").median()
+samples_annotated = samples_annotated.dropna(subset=["GENE_NAME"])
+samples_annotated = samples_annotated[~samples_annotated.GENE_NAME.str.contains("///")]
+samples_annotated = samples_annotated.groupby("GENE_NAME").median()
 # print(samples_annotated.index)
 
 print('\n','Column names from the matrix: ',samples_annotated.columns)
